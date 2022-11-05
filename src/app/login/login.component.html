@@ -1,0 +1,30 @@
+
+<div class="container">
+    <img width="100%" height="700" style="text-align: center; background-image:url('../../assets/pizza4.jpeg');background-repeat: no-repeat;background-size: cover;background-color: rgba(255,255,255,0.6);
+        background-blend-mode: lighten;">
+    
+        <div class="centered">
+            <div class="signin-content">
+                <mat-card>
+                  <mat-card-content>
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                      <p style="color: deeppink;">Please login to continue</p>
+                      <mat-form-field class="full-width-input">
+                        <input matInput placeholder="User" formControlName="userName" required>
+                        <mat-error *ngIf="isFieldInvalid('userName')">
+                          Please inform your user name
+                        </mat-error>
+                      </mat-form-field>
+                      <mat-form-field class="full-width-input">
+                        <input matInput type="password" placeholder="Password" formControlName="password" required>
+                        <mat-error *ngIf="isFieldInvalid('userName')">
+                          Please inform your password
+                        </mat-error>
+                      </mat-form-field>
+                      <button mat-raised-button color="accent" type="submit">Login</button>
+                    </form>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+        </div>
+     </div>
